@@ -1,4 +1,7 @@
 from unittest import TestCase
+from post import Post
 
 class PostTest(TestCase):
-    pass
+    def test_create_post(self):
+        new_post = Post ('New', "Lorem ipsum")
+        

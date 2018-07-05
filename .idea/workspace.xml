@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/blog/unit" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bede4879-0332-42f9-82d2-7abb69780550" name="Default" comment="" />
+    <list default="true" id="bede4879-0332-42f9-82d2-7abb69780550" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/blog/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/unit/post_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/unit/post_test.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,23 +25,26 @@
       </file>
       <file leaf-file-name="post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/post.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="blog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/blog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="post_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/unit/post_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="90">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +65,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/blog/app.py" />
-        <option value="$PROJECT_DIR$/blog/post.py" />
         <option value="$PROJECT_DIR$/blog/blog.py" />
+        <option value="$PROJECT_DIR$/blog/post.py" />
         <option value="$PROJECT_DIR$/blog/unit/post_test.py" />
       </list>
     </option>
@@ -185,20 +192,23 @@
     <entry file="file://$PROJECT_DIR$/blog/app.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/post.py">
+    <entry file="file://$PROJECT_DIR$/blog/blog.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog.py">
+    <entry file="file://$PROJECT_DIR$/blog/post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/unit/post_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
