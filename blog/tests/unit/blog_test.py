@@ -7,4 +7,7 @@ class BlogTest(TestCase):
 
         self.assertEqual("Ian Kowalsky", new_blog.author)
         self.assertEqual("Cookies Time", new_blog.title)
+    #   self.assertListEqual([], new_blog.posts)
+        self.assertEqual(0, len(new_blog.posts))
+        
 
