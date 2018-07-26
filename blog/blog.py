@@ -4,4 +4,11 @@ class Blog:
         self.title = title
         self.posts = []
 
-        
+    def __repr__(self):
+        return '{} by {} ({} post{})'.format(self.title,
+                                             self.author,
+                                             len(self.posts),
+                                            's' if len(self.posts) != 1 else '')
+
+
+
