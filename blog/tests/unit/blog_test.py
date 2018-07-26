@@ -11,8 +11,15 @@ class BlogTest(TestCase):
         self.assertEqual(0, len(new_blog.posts))
 
     def test_repr_none_post(self):
-        single_post_blog = Blog("Ian Kowalsky", "Cookies Time")
+        none_post_blog = Blog("Ian Kowalsky", "Cookies Time")
 
         self.assertEqual('Cookies Time by Ian Kowalsky (0 posts available)',
-                         single_post_blog.__repr__())
+                         none_post_blog.__repr__())
 
+    def test_repr_one_post(self):
+        single_post_blog = Blog("Ian Kowalsky", "Cookies Time")
+        single_post_blog.posts = ["One"]
+
+        self.assertEqual('Cookies Time by Ian Kowalsky (1 post available)',
+                         single_post_blog.__repr__())
+        
