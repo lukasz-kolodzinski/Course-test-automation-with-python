@@ -22,4 +22,11 @@ class BlogTest(TestCase):
 
         self.assertEqual('Cookies Time by Ian Kowalsky (1 post available)',
                          single_post_blog.__repr__())
-        
+
+    def test_repr_many_posts(self):
+        many_posts_blog = Blog("Ian Kowalsky", "Cookies Time")
+        many_posts_blog.posts = ["One", "Two", "Three"]
+
+        self.assertEqual('Cookies Time by Ian Kowalsky (3 posts available)',
+                         many_posts_blog.__repr__())
+
