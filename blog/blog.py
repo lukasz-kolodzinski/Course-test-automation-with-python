@@ -14,4 +14,7 @@ class Blog:
 
     def create_new_post(self, title, content):
         self.posts.append(Post(title, content))
+        print((self.posts[0]))
+
+
 

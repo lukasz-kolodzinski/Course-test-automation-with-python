@@ -35,3 +35,10 @@ class BlogTest(TestCase):
         blog_with_post.create_new_post("Something delicious", "We love sweets and so on")
 
         self.assertEqual(1, len(blog_with_post.posts))
+
+    def test_create_new_post_verify_post_title(self):
+        blog_with_post = Blog ("Ian Kowalsky", "Cookies Time")
+        blog_with_post.create_new_post("Something delicious", "We love sweets and so on")
+
+        self.assertEqual("Something delicious", blog_with_post.posts[0].title)
+
