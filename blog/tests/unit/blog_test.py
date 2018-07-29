@@ -30,3 +30,8 @@ class BlogTest(TestCase):
         self.assertEqual('Cookies Time by Ian Kowalsky (3 posts available)',
                          many_posts_blog.__repr__())
 
+    def test_create_new_post_verify_posts_amount(self):
+        blog_with_post = Blog ("Ian Kowalsky", "Cookies Time")
+        blog_with_post.create_new_post("Something delicious", "We love sweets and so on")
+
+        self.assertEqual(1, len(blog_with_post.posts))
