@@ -1,3 +1,5 @@
+from blog.post import Post
+
 class Blog:
     def __init__(self, author, title):
         self.author = author
@@ -10,5 +12,6 @@ class Blog:
                                              len(self.posts),
                                             's' if len(self.posts) != 1 else '')
 
-
+    def create_new_post(self, title, content):
+        self.posts.append(Post(title, content))
 
