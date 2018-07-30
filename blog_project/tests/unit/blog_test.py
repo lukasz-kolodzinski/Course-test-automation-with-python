@@ -47,3 +47,16 @@ class BlogTest(TestCase):
         blog_with_post.create_new_post("Something delicious", "We love sweets and so on")
 
         self.assertEqual("We love sweets and so on", blog_with_post.posts[0].content)
+
+    def test_create_json_blog(self):
+        new_blog = Blog ("Ian Kowalsky", "Cookies Time")
+        new_blog.create_new_post("Something delicious", "We love sweets and so on")
+        expected_json = {
+            "author" : "Ian Kowalsky",
+            "title" : "Cookies Time",
+            "posts" : [{
+                "title" : "Something delicious",
+                "content" : "We love sweets and so on" }]
+        }
+
+        self.assertDictEqual(expected_json, new_blog.create_json())
