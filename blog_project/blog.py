@@ -1,4 +1,4 @@
-from blog.post import Post
+from blog_project.post import Post
 
 class Blog:
     def __init__(self, author, title):
@@ -16,5 +16,9 @@ class Blog:
         self.posts.append(Post(title, content))
         print((self.posts[0]))
 
-
-
+    def create_json(self):
+        return {
+            "author" : self.author,
+            "title" : self.title,
+            "posts" : [post.create_json() for post in self.posts]
+        }
