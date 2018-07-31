@@ -1,7 +1,6 @@
 blogs = dict()
 
 def menu():
-
     print_blogs ()
 
 def print_blogs():
