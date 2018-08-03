@@ -1,13 +1,14 @@
 from unittest import TestCase
-from blog_project.app import *
-from unittest.mock import patch
+import blog_project.app
+from unittest.mock import patch, MagicMock
 from blog_project.blog import Blog
 
 class AppTest(TestCase):
     def test_print_blogs(self):
-        new_blog = Blog ("Ian Rankin", "Dark Stories")
-        
-        with patch ('builtins.print') as mocked_print:
-            print_blogs()
-            mocked_print.assert_called_with()
+        blog = Blog('Test Author', 'Test')
+        blog_project.app.blogs = {'Test Author' : blog}
+        with patch('builtins.print') as mocked_print:
+            blog_project.app.print_blogs()
+            mocked_print.assert_called_with('Test by Test Author (0 posts available)')
+
 
