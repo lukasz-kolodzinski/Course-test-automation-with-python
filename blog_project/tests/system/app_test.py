@@ -1,6 +1,6 @@
 from unittest import TestCase
 import blog_project.app
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from blog_project.blog import Blog
 
 class AppTest(TestCase):
