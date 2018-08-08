@@ -11,8 +11,19 @@ def menu():
             print_blogs()
         elif selection == 'r':
             ask_read_blog()
+        elif selection == 'p':
+            ask_create_post()
         selection =input(MENU_PROMPT)
 
 def print_blogs():
     for key, blog in blogs.items():
         print("{}".format(blog))
+
+def ask_create_blog():
+    pass
+
+def ask_read_blog():
+    pass
+
+def ask_create_post():
+    pass
