@@ -1,3 +1,5 @@
+from blog_project.blog import Blog
+
 MENU_PROMPT = 'Enter "c" to create new blog; "l" to list blogs; "r" to read one, "p" to create post; "q" to quit'
 blogs = dict()
 
@@ -20,7 +22,9 @@ def print_blogs():
         print("{}".format(blog))
 
 def ask_create_blog():
-    pass
+    title = input('Please, provide blog title: ')
+    author = input('Please, enter author name: ')
+    blogs['title'] = Blog(title, author)
 
 def ask_read_blog():
     pass
