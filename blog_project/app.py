@@ -20,6 +20,7 @@ def menu():
 def print_blogs():
     for key, blog in blogs.items():
         print("{}".format(blog))
+        print(blog)
 
 def ask_create_blog():
     title = input('Please, provide blog title: ')
@@ -27,6 +28,11 @@ def ask_create_blog():
     blogs[title] = Blog(title, author)
 
 def ask_read_blog():
+    title = input('Please, provide blog title: ')
+
+    print_posts(blogs[title])
+
+def print_posts():
     pass
 
 def ask_create_post():
