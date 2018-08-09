@@ -32,7 +32,11 @@ def ask_read_blog():
 
     print_posts(blogs[title])
 
-def print_posts():
+def print_posts(blog):
+    for post in blog.posts:
+        print_post(post)
+
+def print_post():
     pass
 
 def ask_create_post():
