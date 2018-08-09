@@ -24,7 +24,7 @@ def print_blogs():
 def ask_create_blog():
     title = input('Please, provide blog title: ')
     author = input('Please, enter author name: ')
-    blogs['title'] = Blog(title, author)
+    blogs[title] = Blog(title, author)
 
 def ask_read_blog():
     pass

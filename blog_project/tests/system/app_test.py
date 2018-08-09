@@ -22,3 +22,9 @@ class AppTest(TestCase):
         with patch('builtins.print') as mocked_print:
             blog_project.app.print_blogs()
             mocked_print.assert_called_with('Test by Test Author (0 posts available)')
+
+    def test_ask_create_blog(self):
+        with patch('builtins.input') as mocked_input:
+            mocked_input.side_effect = ('Test title', 'Fake Author')
+            blog_project.app.ask_create_blog()
+            self.assertIsNotNone(blog_project.app.blogs.get('Test title'))
