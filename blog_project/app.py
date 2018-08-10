@@ -43,7 +43,7 @@ def print_posts(blog):
         print_post(post)
 
 def print_post(post):
-    print(POST_TEMPLATE.format(post.title, post.content)
+    print(POST_TEMPLATE.format(post.title, post.content))
 
 def ask_create_post():
-    pass
+     pass

@@ -28,3 +28,12 @@ class AppTest(TestCase):
             mocked_input.side_effect = ('Test title', 'Fake Author')
             blog_project.app.ask_create_blog()
             self.assertIsNotNone(blog_project.app.blogs.get('Test title'))
+
+    def test_ask_read_blog(self):
+        blog = Blog('Test', 'Test Author')
+        blog_project.app.blogs = {'Test': blog}
+        with patch('builtins.input', return_value = 'Test'):
+            with patch('blog_project.app.print_posts') as mocked_print_posts:
+                blog_project.app.ask_read_blog()
+
+                mocked_print_posts.assert_called_with(blog)
