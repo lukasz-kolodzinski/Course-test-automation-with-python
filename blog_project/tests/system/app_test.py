@@ -2,6 +2,7 @@ from unittest import TestCase
 import blog_project.app
 from unittest.mock import patch
 from blog_project.blog import Blog
+from blog_project.post import Post
 
 class AppTest(TestCase):
     def test_menu_user_input(self):
@@ -46,3 +47,16 @@ class AppTest(TestCase):
             blog_project.app.print_posts(blog)
 
             mocked_print_post.assert_called_with(blog.posts[0])
+
+    def test_print_post(self):
+        post = Post('Test Title', 'Test Content')
+        expected_print = '''
+    >>>Test Title<<<<
+
+    Test Content
+
+    '''
+        with patch('builtins.print') as mocked_print:
+            blog_project.app.print_post(post)
+
+            mocked_print.assert_called_with(expected_print)
