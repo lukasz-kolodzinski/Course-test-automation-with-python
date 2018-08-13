@@ -37,3 +37,12 @@ class AppTest(TestCase):
                 blog_project.app.ask_read_blog()
 
                 mocked_print_posts.assert_called_with(blog)
+
+    def test_print_posts(self):
+        blog = Blog('Test', 'Test Author')
+        blog_project.app.blogs = {'Test': blog}
+        blog.create_new_post('Test Title', 'Test Content')
+        with patch('blog_project.app.print_post') as mocked_print_post:
+            blog_project.app.print_posts(blog)
+
+            mocked_print_post.assert_called_with(blog.posts[0])
