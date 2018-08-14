@@ -46,4 +46,7 @@ def print_post(post):
     print(POST_TEMPLATE.format(post.title, post.content))
 
 def ask_create_post():
-     pass
+    blog_name = input('Enter blog title where you want to warite a post: ')
+    title = input('Type in post title')
+    content = input('Type in post content')
+    blogs[blog_name].create_new_post(title,content)
