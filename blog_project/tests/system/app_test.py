@@ -18,12 +18,12 @@ class AppTest(TestCase):
 
             self.assertIsNotNone(blog_project.app.blogs['Test Title'])
 
-
     def test_menu_call_print_blogs(self):
         with patch('blog_project.app.print_blogs') as mocked_print_blogs:
-             with patch('builtins.input'):
+             with patch('builtins.input', return_value = 'l'):
                 blog_project.app.menu()
-                mocked_print_blogs.assert_called_with()
+
+                mocked_print_blogs.assert_called()
 
     def test_print_blogs(self):
         blog = Blog('Test Author', 'Test')
