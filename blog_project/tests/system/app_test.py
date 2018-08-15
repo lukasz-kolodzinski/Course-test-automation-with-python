@@ -25,6 +25,14 @@ class AppTest(TestCase):
 
                 mocked_print_blogs.assert_called()
 
+    def test_menu_call_read_blog(self):
+        with patch('builtins.input') as mocked_input:
+            with patch('blog_project.app.ask_read_blog') as mocked_read_blog:
+                mocked_input.side_effect = ('r', 'q')
+                blog_project.app.menu()
+
+                mocked_read_blog.assert_called()
+
     def test_print_blogs(self):
         blog = Blog('Test Author', 'Test')
         blog_project.app.blogs = {'Test Author' : blog}
