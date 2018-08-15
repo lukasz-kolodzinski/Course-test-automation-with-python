@@ -11,6 +11,14 @@ class AppTest(TestCase):
             #mocked_input.assert_called_with('Enter "c" to create new blog; "l" to list blogs; "r" to read one, "p" to create post; "q" to quit')
             mocked_input.assert_called_with(blog_project.app.MENU_PROMPT)
 
+    def test_menu_calls_create_blog(self):
+        with patch('builtins.input') as mocked_input:
+            mocked_input.side_effect = ('c', 'Test Title', 'Test Author', 'q')
+            blog_project.app.menu()
+
+            self.assertIsNotNone(blog_project.app.blogs['Test Title'])
+
+
     def test_menu_call_print_blogs(self):
         with patch('blog_project.app.print_blogs') as mocked_print_blogs:
              with patch('builtins.input'):
