@@ -20,7 +20,8 @@ class AppTest(TestCase):
 
     def test_menu_call_print_blogs(self):
         with patch('blog_project.app.print_blogs') as mocked_print_blogs:
-             with patch('builtins.input', return_value = 'l'):
+            with patch('builtins.input') as mocked_input:
+                mocked_input.side_effect = ('l', 'q')
                 blog_project.app.menu()
 
                 mocked_print_blogs.assert_called()
