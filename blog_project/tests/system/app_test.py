@@ -5,6 +5,10 @@ from blog_project.blog import Blog
 from blog_project.post import Post
 
 class AppTest(TestCase):
+    # def setUp(self):
+    #     blog = Blog('Test Author', 'Test')
+    #     blog_project.app.blogs = {'Test Author' : blog}
+
     def test_menu_user_input(self):
         with patch('builtins.input') as mocked_input:
             blog_project.app.menu()
