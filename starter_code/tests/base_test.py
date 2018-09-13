@@ -1,0 +1,18 @@
+""""
+    Important:
+        This class should be used for all non-unit tests that are related with database
+"""
+
+from unittest import TestCase
+from starter_code.app import app
+from starter_code.db import db
+
+class BaseTest(TestCase):
+    def setUp(self):
+        app.config["SQLALCHEMY_DATABASE_URI"] = "'sqlite:///"
+        with app.app_context():
+            db.init_app(app)
+            db.create_all()
+        self.app = app.test_client()
+        self.app = app.app_context()
+        
