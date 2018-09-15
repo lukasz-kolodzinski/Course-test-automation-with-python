@@ -1,9 +1,9 @@
-from unittest import TestCase
+from store_app.tests.unit.models.unit_base_test import *
 
 from store_app.models.item import ItemModel
 
 
-class ItemTest(TestCase):
+class ItemTest(TestBase):
     def test_create_item(self):
         item = ItemModel('test', 19.99, 1)
 
