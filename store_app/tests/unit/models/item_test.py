@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from models.item import ItemModel
+from store_app.models.item import ItemModel
 
 
 class ItemTest(TestCase):
@@ -13,7 +13,7 @@ class ItemTest(TestCase):
                          "The price of the item after creation does not equal the constructor argument.")
 
     def test_item_json(self):
-        item = ItemModel('test', 19.99)
+        item = ItemModel('test', 19.99, 1)
         expected = {
             'name': 'test',
             'price': 19.99
