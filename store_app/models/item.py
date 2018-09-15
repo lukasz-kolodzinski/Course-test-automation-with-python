@@ -1,4 +1,4 @@
-from db import db
+from store_app.db import db
 
 
 class ItemModel(db.Model):
