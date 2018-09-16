@@ -14,4 +14,16 @@ class UserRegistration(Resource):
                         type = str,
                         required = True,
                         help = "This field cannot be blank")
-    
+
+    def post(self):
+        data = UserRegistration.parser.parse_args()
+
+        if UserModel.find_by_username(data["username"]):
+            return {"messge":
+                        "A user with following name already exists"}, 400
+
+        user = UserModel(**data)
+        user.save_to_database()
+
+        return {"message":
+                    "User created successfully"}, 201
