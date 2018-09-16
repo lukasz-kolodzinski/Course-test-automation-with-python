@@ -6,4 +6,10 @@ class StoreTest(BaseTest):
         store = StoreModel("test")
 
         self.assertListEqual(store.items.all(), [])
-        
+
+    def test_save_store_into_db(self):
+        with self.app_context():
+            store = StoreModel("test")
+            store.save_to_db()
+
+            self.assertIsNotNone(StoreModel.find_by_name("test"))
