@@ -12,7 +12,7 @@ def authenticate(username, password):
     if user and safe_str_cmp(user.password, password):
         return user
 
-    def identity(payload):
+def identity(payload):
         """
         Function that gets called when user has already authenticated, and Flask-JWT
         verified authorization header.
